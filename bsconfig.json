@@ -8,7 +8,6 @@
   "bs-dependencies": [
     "reason-react",
     "@reasonml-community/graphql-ppx",
-    "bs-reach",
     "rescript-apollo-client"
   ],
   "ppx-flags": [
