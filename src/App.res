@@ -1,5 +1,3 @@
-%raw("import('../src/common/styles/app.css')")
-
 // If you need globally initialized data or state, this is the entry for that. Checkout this rescript-nextjs template for reference, https://github.com/ryyppy/rescript-nextjs-template
 
 type pageProps
