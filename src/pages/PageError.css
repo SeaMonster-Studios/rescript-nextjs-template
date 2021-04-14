@@ -1,0 +1,9 @@
+.page-404 h1 {
+  font-size: 8rem;
+}
+
+@screen sm {
+  .page-404 h1 {
+    font-size: 16rem;
+  }
+}

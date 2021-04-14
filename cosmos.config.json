@@ -1,0 +1,7 @@
+{
+    "staticPath": "public",
+    "fixtureFileSuffix": "fixture.bs",
+    "watchDirs": [
+        "src"
+    ]
+}
