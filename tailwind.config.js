@@ -8,12 +8,8 @@ module.exports = {
   purge: {
     // Specify the paths to all of the template files in your project
     content: [
-      './pages/**/*.re',
-      './pages/**/*.css',
-      './pages/**/*.js',
-      './src/**/*.re',
-      './src/**/*.js',
-      './src/**/*.css',
+      './pages/**/*.{re,res,css,js}',
+      './src/**/*.{re,res,css,js}'
     ],
     options: {
       whitelist: ["html", "body"],
