@@ -3,6 +3,7 @@ open! Belt
 
 let default = () => {
   <div>
+    <h1> {"my home page"->str} </h1>
     <PageMetaFields
       description={"some details"}
       title={"My app or website"}

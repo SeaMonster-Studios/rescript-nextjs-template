@@ -1,4 +1,4 @@
-# Safe and Strong v2 (Vercel, Next, ReScript)
+# SeaMonster Studios ReScript-NextJS Template
 
 This is a NextJS based template with following setup:
 
@@ -7,9 +7,16 @@ This is a NextJS based template with following setup:
 - Basic ReScript Bindings for Next
 - Preconfigured Dependencies: `reason-react`
 
+## Stack
+
+- [Vercel](https://vercel.com/docs)
+- [NextJS](https://nextjs.org/docs/getting-started)
+- [ReScript](https://rescript-lang.org/docs/manual/latest/introduction)
+- [TailwindCSS](https://tailwindcss.com/docs)
+
 ## Development
 
-0. `yarn fetch:schema` - fetch the craftcms graphql schema
+0. `yarn fetch:schema` - fetch the graphql schema
 0. `yarn dev` - start the dev server
 
 ## Vercel Deployments
@@ -46,76 +53,4 @@ We recommend upgrading to the newest ReScript (bs-platform) version as soon as p
 Make sure to create interface files (`.resi`) for each `page/*.res` file, or use %%private() for let bindings other than the `default` let binding...
 
 Fast Refresh requires you to **only export React components**, and it's easy to unintenionally export other values than that.
-
-## Useful commands
-
-Build CSS seperately via `postcss` (useful for debugging)
-
-```
-# Devmode
-postcss styles/main.css -o test.css
-
-# Production
-NODE_ENV=production postcss styles/main.css -o test.css
-```
-
-## Test production setup with Next
-
-```
-# Make sure to uncomment the `target` attribute in `now.json` first, before you run this:
-yarn build
-PORT=3001 npm start
-```
-
-## GraphQL & Data
-
-We're using reason-apollo-client to get data from Shopify.
-
-reason-apollo-client examples: https://github.com/reasonml-community/reason-apollo-client/tree/master/EXAMPLES
-
-Shopify API Queryable Objects: https://shopify.dev/docs/storefront-api/reference/object
-
-
-Shopify API examples in use (these are in JS and within their SDK so are only useful for seeing the data structures:
-- Query: https://github.com/Shopify/js-buy-sdk/blob/master/src/graphql/productConnectionQuery.graphql
-- Fragment: https://github.com/Shopify/js-buy-sdk/blob/master/src/graphql/ProductFragment.graphql
-
-### Graphiql Explorer
-
-Altair is a cross-platform graphiql explorer that can be helpful when testing out queries (https://altair.sirmuel.design/docs/)
-
-To make it work with a Shopify store add the following headers:
-- X-Shopify-Storefront-Access-Token: (access token retreived from private shopify app, bottom of the screen and not the app password)
-- Accept: application/json
-
-#### Install
-Linux:
-```
-snap install altair
-```
-macOS:
-```
-brew cask install altair-graphql-client
-```
-
-## The Stack
-- NextJS UI Framework
-- ReScript & React
-- CMS: GraphCMS
-- Backend: GraphCMS & Shopify GraphQL APIs
-- Serverless Framework (AWS Lambdas) if custom business logic is needed on the backend
-
-### Setup a new project
-
-1. Clone repo
-2. Create GraphCMS project
-3. Copy `.env.local.example` to `.env.local`
-    1. NEXT_PUBLIC_SHOPIFY_STORE (example: project-seaotter.myshopify.com) 
-    2. NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN (Get this from making a private app in Shopify that has access to the storefront API, it's at the bottom of the private app screen and is NOT the app password).
-    3. NEXT_PUBLIC_SHOPIFY_STOREFRONT_VERSION (You can change this to a different version if you'd like to, or just leave it)
-    4. GRAPHCMS_ENDPOINT
-    5. GRAPHCMS_ACCESS_TOKEN (Get the token by going to Settings > API keys in your GraphCMS project.)
-
-
-
 
